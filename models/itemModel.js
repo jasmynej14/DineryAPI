@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 var itemSchema = new Schema({
     name:String,
     type:String,
-    menu: mongoose.ObjectID,
+    menu: {type:mongoose.Schema.Types.ObjectId, ref:'Menu'},
     price:Number
 })
 

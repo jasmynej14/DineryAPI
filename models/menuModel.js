@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 var menuSchema = new Schema({
     name:String,
-    restaurant: mongoose.ObjectID
+    restaurant:{type:mongoose.Schema.Types.ObjectId,ref:"Restaurant"}
 })
 
 const Menu = mongoose.model('Menu',menuSchema)

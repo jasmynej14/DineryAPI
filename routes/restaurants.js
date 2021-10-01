@@ -5,7 +5,13 @@ const Restaurant = require('../models/restaurantModel')
 
 
 router.get('/', asyncHandler(async (req,res)=>{
-    const allRestaurants = await Restaurant.find({})
+    let allRestaurants;
+    if(JSON.stringify(req.query) === '{}'){
+        allRestaurants = await Restaurant.find({})
+    }
+    else{
+        allRestaurants = await Restaurant.find(req.query)
+    }
     res.send(allRestaurants)
 }))
 

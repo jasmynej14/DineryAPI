@@ -4,7 +4,8 @@ const asyncHandler = require('express-async-handler')
 const Menu = require('../models/menuModel')
 const Item = require('../models/itemModel')
 router.get('/',asyncHandler(async (req,res)=>{
-    const allMenus = await Menu.find({}).populate('restaurant')
+
+    const allMenus = await Menu.find(req.query).populate('restaurant')
     res.send(allMenus)
 }))
 

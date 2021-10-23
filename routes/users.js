@@ -22,8 +22,13 @@ router.post('/:id/favorite',asyncHandler(async (req,res) => {
   res.json(user)
 }))
 
-router.get('/:id/favorite',asyncHandler(async (req,res) => {
-  const user = await User.findById(req.params.id).populate('favorites')
-  res.json(user)
+router.post('/login',asyncHandler(async (req,res) => {
+  const user = await User.findOne({email:req.body.email})
+  if(user && user.password === req.body.password){
+    res.json({loggedIn:true,user:user})
+  }
+  else{
+    res.json({loggedIn:false})
+  }
 }))
 module.exports = router;

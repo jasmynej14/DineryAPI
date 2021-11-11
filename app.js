@@ -11,6 +11,7 @@ var restaurantsRouter = require('./routes/restaurants')
 var menusRouter = require('./routes/menus')
 var itemsRouter = require('./routes/items')
 var compareRouter = require('./routes/compare')
+var reviewsRouter = require('./routes/reviews')
 var app = express();
 var connect = require('./db/connection')
 
@@ -32,6 +33,7 @@ app.use('/restaurants',restaurantsRouter)
 app.use('/menus',menusRouter)
 app.use('/items',itemsRouter)
 app.use('/compare',compareRouter)
+app.use('/reviews',reviewsRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -4,61 +4,61 @@ const allRestaurants = [
         type:['dine-in','take-out','delivery'],
         cuisine: ['Pizza','Italian','America'],
         location:{
-            address:"",
-            city:"",
+            address:"714 Moody St",
+            city:"Waltham",
             state:"MA",
-            zipCode:""
+            zipCode:"02453"
         },
-        rating:0
+        rating:4
     },
     {
-        name:"",
-        type:[],
-        cuisine: [],
+        name:"Gracies Kitchen",
+        type:['dine-in','take-out','delivery'],
+        cuisine: ['American','Sandwiches'],
         location:{
-            address:"",
-            city:"",
+            address:"39 Emerson Road",
+            city:"Waltham",
             state:"MA",
-            zipCode:""
+            zipCode:"02451"
         },
-        rating:0
+        rating:5
     },
     {
-        name:"",
-        type:[],
-        cuisine: [],
+        name:"NY Pie",
+        type:['delivery','take-out'],
+        cuisine: ['Pizza'],
         location:{
-            address:"",
-            city:"",
+            address:"934 Moody St",
+            city:"Waltham",
             state:"MA",
-            zipCode:""
+            zipCode:"02453"
         },
-        rating:0
+        rating:4
     },
     {
-        name:"",
-        type:[],
-        cuisine: [],
+        name:"Carl's Steaks and Subs",
+        type:['take-out','delivery'],
+        cuisine: ['sandwich','american'],
         location:{
-            address:"",
-            city:"",
+            address:"55 Prospect st",
+            city:"Waltham",
             state:"MA",
-            zipCode:""
+            zipCode:"02453"
         },
-        rating:0
+        rating:4
     },
     {
-        name:"",
-        type:[],
-        cuisine: [],
+        name:"AK's Waltham",
+        type:['dine-in','take-out','delivery'],
+        cuisine: ['Pizza','Sandwiches','American'],
         location:{
-            address:"",
-            city:"",
+            address:"559 South St",
+            city:"Waltham",
             state:"MA",
-            zipCode:""
+            zipCode:"02453"
         },
-        rating:0
+        rating:5
     },
 ]
 
-export default allRestaurants;
+module.exports =  allRestaurants;
